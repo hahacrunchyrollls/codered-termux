@@ -10,7 +10,7 @@ CYAN='\033[0;36m'
 WHITE='\033[1;37m'
 NC='\033[0m'
 
-VER="3.8"
+VER="1"
 
 # Clear screen
 clear_screen() {
@@ -32,9 +32,9 @@ show_loading_bar() {
             20) run_silently "apt install -y wget"; progress=30 ;;
             30) run_silently "apt install -y dnsutils"; progress=40 ;;
             40) run_silently "apt install -y nano"; progress=50 ;;
-            50) run_silently "wget https://github.com/hahacrunchyrollls/TERMUX-SCRIPT/raw/refs/heads/main/termux-script-version-$VER"; progress=70 ;;
-            70) run_silently "chmod +x termux-script-version-$VER"; progress=80 ;;
-            80) run_silently "mv termux-script-version-$VER /data/data/com.termux/files/usr/bin/menu"; progress=100 ;;
+            50) run_silently "wget https://github.com/hahacrunchyrollls/codered-termux/raw/refs/heads/main/codered-$VER"; progress=70 ;;
+            70) run_silently "chmod +x codered-$VER"; progress=80 ;;
+            80) run_silently "mv codered-$VER /data/data/com.termux/files/usr/bin/codered"; progress=100 ;;
         esac
         
         # Build progress bar
@@ -60,7 +60,7 @@ run_silently() {
 show_header() {
     clear_screen
     echo -e "${WHITE}╔══════════════════════════╗${NC}"
-    echo -e "${WHITE}  PHC_Jerico Termux Script ${NC}"
+    echo -e "${WHITE}  Codered Termux Script ${NC}"
     echo -e "${WHITE}       Version: $VER        ${NC}"
     echo -e "${WHITE}╚══════════════════════════╝${NC}"
     echo
@@ -104,4 +104,4 @@ fi
 # Start installation
 main_installation
 
-echo -e "${GREEN}Ready! Type 'menu' to start${NC}"
+echo -e "${GREEN}Ready! Type 'codered' to start${NC}"
